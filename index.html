@@ -1,229 +1,268 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chen Shi - Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2em;
+    }
+    .about {
+      text-align: center;
+      padding: 2em;
+    }
+    /* .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    } */
+    /* .project {
+      background-color: white;
+      padding: 1em;
+      margin: 1em;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    } */
 
-<head> <!-- tab label -->
-    <title>Chen Shi's Page</title>  
+    .project {
+        display: flex;
+        align-items: center;
+        margin: 1em;
+        background-color: white;
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        /* margin: auto;
+        align-items: center; */
+        height: auto;
+    }
+
+    .project-details {
+        flex: 2;
+    }
+  
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; 
+    }
+    .centered-title {
+        text-align: center;
+    }
+
+    .selfie {
+        max-width: 30%; /* Adjust the width as needed */
+        height: auto;
+        margin-right: 10px; /* Add some space between the image and text */
+    }
+  </style>
+
+
+
+
+
 </head>
+<body>
+  <header>
+    <h1>Chen Shi</h1>
+    <p>Assistant Researcher <br> Department of Earth, Planetary, and Space Sciences 
+        <br> University of California, Los Angeles</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
 
-<body style="background:rgb(217, 240, 252)">
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img src="photo.jpg" alt="My Selfie" class="selfie">
+            <p style="padding-left:80px; padding-right:60px; text-align: left;">I am now an assistant researcher at 
+                <a href="http://epss.ucla.edu/" target="_blank">
+                Department of Earth, Planetary, and Space Sciences, UCLA.</a>
+                <br><br>I work with Professor 
+                <a href="http://www.igpp.ucla.edu/people/velli/" target="_blank">
+                Marco Velli</a> and my research focuses on solar physics, especially 
+                topics on solar wind turbulence and magnetic reconnection. 
+                <br><br>Here is my <a href="./Chen_Shi_Resume.pdf" target="_blank">CV</a>.
 
-    <h1 align="center">Chen Shi's Homepage</h1>  <!-- Greetings -->
+            </p>
+        </div>
+      </section>
 
 
-    <!-- The table at top displaying my information -->
-    <table align="center" border="1">
-        <tr>
-            <td rowspan="2"><a href="./large_photo.html" target="_blank" title="click for large photo">
-                <img src="photo.jpg" width="200px" 
-                height="150px" alt="My photo"></a></td>
-            <td style="width:80px; text-align:center">Email</td> 
-            <td style="padding:0px 10px 0px 10px">cshi1993@ucla.edu</td>
-            <td style="padding:0px 10px 0px 10px"><a href="./Chen_Shi_Resume.pdf" target="_blank"><center>CV</center></a></td>
-        </tr>
-        <tr>
-            <td style="text-align:center">Office</td> 
-            <td colspan="2" style="padding:0px 10px 0px 10px">595 Charles Young Drive East, 
-                <u>Geology 6697</u><br/>Los Angeles, CA 90095</td>
-        </tr>
-    </table>
+    <section id="projects" class="projects">
+      <h2><center>Projects</center></h2>
+      <div class="project">
+        
+        <figure class="project-image">
+            <img src="./figures/solarwind.jpg"  alt="Solar Wind">
+        </figure>
+        <div class="project-details">
+            <h3>Origin of the solar wind</h3>
+            
+            <p>Solar wind is the hot and supersonic plasma flow that is ejected
+                from the solar atmosphere. It carries a significant amount of energy and 
+                causes various space weather events, e.g. 
+                magnetic storms, when it hits the Earth's magnetetoshphere.
+                <br><br> Where does the solar wind originate and how does it gain sufficient energy
+                to escape the solar gravity and reach a supersonic speed are still far from being completely understood.
+                I have been working on theories and modeling of the solar wind generation, including development of polytropic solar wind
+                model, and 1D simulations of a two-temperature (ion and electron temperatures) Alfv&#233n wave driven solar wind.
+            </p>
+        </div>
+      </div>
 
-    <!-- <script type="text/javascript">
-    </script> -->
+      <div class="project">
+        <figure class="project-image">
+            <img src="./figures/turbulence.png" alt="Turbulence">
+        </figure>
+        <div class="project-details">
+            <h3>Solar wind turbulence</h3>
+            
+            <p>Turbulence is ubiquitos in the solar wind. It refers to the 
+                fluctuations that span across a huge range of spatial and temporal scales. 
+                It is believed to be a major 
+                energy source for the heating and acceleration of the solar wind.
+                <br><br> My work focuses on the evolution of solar wind turbulence at MHD scales. By combining satellite observations and 
+                numerical simulations, I analyze how the large-scale structures, including stream-interaction-regions (SIRs)
+                and heliospheric current sheet (HCS), affect the turbulence properties. Using Parker Solar Probe measurements,
+                I study the early-stage evolution of the turbulence and how the turbulence properties depend on the source of
+                the solar wind.
+            </p>
+        </div>
+    </div>
 
-    <!-- Introduce my self briefly -->
-    <p style="padding-left:80px; padding-right:60px">I am now an assistant researcher at 
-        <a href="http://epss.ucla.edu/" target="_blank">
-        Department of Earth, Planetary, and Space Sciences, UCLA.</a>
-    </p>
-    <p style="padding-left:80px; padding-right:60px">I work with Professor 
-        <a href="http://www.igpp.ucla.edu/people/velli/" target="_blank">
-        Marco Velli</a> and my research focuses on solar physics, especially 
-        topics on solar wind turbulence and magnetic reconnection. 
-    </p>
+    <div class="project">
+        <figure class="project-image">
+            <img src="./figures/magneticreconnection.jpg" width=100% alt="Magnetic reconnection">
+        </figure>
+        <div class="project-details">
+            <h3>Magnetic reconnection</h3>
+            
+            <p>Magnetic reconnection is a fundamental process in plasma. It happens between 
+                anti-parallel magnetic field lines and converts the magnetic energy into the kinetic and internal energy of the plasma.
+                It is believed to be an important energy source for the coronal heating and solar wind acceleration and it is the key 
+                process underlying different space weather phenomena.
+                <br><br> To understand how reconnection happens explosively at MHD scales, I have 
+                carried out theoretical and numerical studies of the stability problem of plasma current sheets. I analyze the growth of 
+                linear tearing mode instability in the current sheets with different configurations and conduct numerical simulations of the 
+                nonlinear evolution of the current sheets that are susceptible to the tearing mode instability.
+            </p>
+        </div>
+    </div>
+      <!-- Add more project divs as needed -->
+    </section>
 
-    <!-- Research Interests -->
-    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
-    <h2 style="padding-left:60px"> Research interests </h2>
-
-    <!-- solar wind origin -->
-    <h3 style="padding-left:60px"> [1] Origin of the solar wind </h3>
-
-    <p style="padding-left:80px; padding-right:60px"> Solar wind is the hot and supersonic plasma flow that is ejected
-        from the solar atmosphere. It carries a significant amount of energy and causes various space weather events, e.g. 
-        magnetic storms, when it hits the Earth's magnetetoshphere.
-    </p>
-
-    <center>
-        <img src="./figures/solarwind.jpg" alt="solar wind and the Earth" style="width:450px">
-        <figcaption>Solar wind and its interaction with the Earth's magnetosphere. Credit: 
-            <a href="https://www.sciencelearn.org.nz/images/247-solar-wind-plasma-and-the-magnetosphere"
-             target="_blank">The University of Waikato Te Whare Wananga o Waikato</a></figcaption>
-    </center>
-
-    <p style="padding-left:80px; padding-right:60px"> Where does the solar wind originate and how does it gain sufficient energy
-        to escape the solar gravity and reach a supersonic speed are still far from being completely understood.
-        I have been working on theories and modeling of the solar wind generation, including development of polytropic solar wind
-        model, and 1D simulations of a two-temperature (ion and electron temperatures) Alfv&#233n wave driven solar wind.
-    </p>
-
-    <!-- solar wind turbulence -->
-    <h3 style="padding-left:60px"> [2] Solar wind turbulence </h3>
-    <p style="padding-left:80px; padding-right:60px">Turbulence is ubiquitos in the solar wind. It refers to the 
-        fluctuations that span across a huge range of spatial and temporal scales. It is believed to be a major 
-        energy source for the heating and acceleration of the solar wind.
-    </p>
-
+    <section id="publications">
+        <h2 class="centered-title">Selected publications</h2>
+        <h3 style="padding-left:30px"> For a complete publication list, please refer to my <a href="./Chen_Shi_Resume.pdf" target="_blank">CV</a> </h3>
+        <ol style="margin-left: 10px; margin-right: 10px; line-height: 25px">
+            <li> <b><i>Proton and electron temperatures in the solar wind and their correlations with the solar wind speed</i></b>, Chen Shi, Marco Velli, Roberto Lionello, et al., 2023, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/acb341" target="_blank"> ApJ, 944, 82 </a> </li>
+            
+            <li> <b><i>Acceleration of polytropic solar wind: Parker Solar Probe observation and one-dimensional model</i></b>, Chen Shi, Marco Velli, Stuart Bale, et al., 2022, <a href="https://aip.scitation.org/doi/full/10.1063/5.0124703" target="_blank"> PoP, 29, 12 </a> </li>
+            
+            <li> <b><i>Patches of Magnetic Switchbacks and Their Origins</i></b>, Chen Shi, Olga Panasenco, Marco Velli, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac7c11" target="_blank"> ApJ, 934, 152 </a> </li>
+            
+            <li> <b><i>Instabilities in a current sheet with plasma jet</i></b>, Chen Shi, 2022, <a href="https://www.doi.org/10.1017/S0022377822000575" target="_blank"> JPP, 88, 4 </a> </li>
+            
+            <li> <b><i>Influence of the heliospheric current sheet on the evolution of solar wind turbulence</i></b>, Chen Shi, Marco Velli, Anna Tenerani, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac558b" target="_blank"> ApJ, 928, 93 </a> </li>
+            
+            <li> <b><i>Stability of the magnetotail current sheet with normal magnetic field and field-aligned plasma flows</i></b>, Chen Shi, Anton Artemyev, Marco Velli, et al., 2021, <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JA029711" target="_blank"> JGR Space Physics, 126, 11 </a> </li>
+            
+            <li> <b><i>Alfv&#233nic versus non-Alfv&#233nic turbulence in the inner heliosphere as observed by Parker Solar Probe</i></b>, Chen Shi, Marco Velli, Olga Panasenco, et al., 2021, <a href="https://www.aanda.org/articles/aa/abs/2021/06/aa39818-20/aa39818-20.html" target="_blank"> A&A, A21, 12 </a> </li>
+            
+            <li> <b><i>Oblique Tearing Mode Instability: Guide Field and Hall Effect</i></b>, Chen Shi, Marco Velli, Fulvia Pucci, Anna Tenerani & Maria Elena Innocenti, 2020, <a href="https://doi.org/10.3847/1538-4357/abb6fa" target="_blank"> ApJ, 902, 2 </a> </li>
     
-    <center>
-    <img src="./figures/turbulence.png" alt="solar wind turbulence" style="width:350px">
-    <figcaption>Solar wind turbulence. Credit: <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2014.0155"
-         target="_blank">The Royal Society Publishing</a></figcaption>
-    </center>
-
-    <p style="padding-left:80px; padding-right:60px">
-        My work focuses on the evolution of solar wind turbulence at MHD scales. By combining satellite observations and 
-        numerical simulations, I analyze how the large-scale structures, including stream-interaction-regions (SIRs)
-        and heliospheric current sheet (HCS), affect the turbulence properties. Using Parker Solar Probe measurements,
-        I study the early-stage evolution of the turbulence and how the turbulence properties depend on the source of
-        the solar wind.
-    </p>
-
-    <!-- magnetic reconnection -->
-    <h3 style="padding-left:60px"> [3] Magnetic reconnection </h3>
-    <p style="padding-left:80px; padding-right:60px">Magnetic reconnection is a fundamental process in plasma. It happens between 
-        anti-parallel magnetic field lines and converts the magnetic energy into the kinetic and internal energy of the plasma.
-        It is believed to be an important energy source for the coronal heating and solar wind acceleration and it is the key 
-        process underlying different space weather phenomena.
-    </p>
-
-    <center>
-        <img src="./figures/magneticreconnection.jpg" alt="magnetic reconnection" style="width:450px">
-        <figcaption>Magnetic reconnection. Credit: <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JA025935"
-            target="_blank">Hesse and Cassak</a></figcaption>
-    </center>
-
-    <p style="padding-left:80px; padding-right:60px">To understand how reconnection happens explosively at MHD scales, I have 
-        carried out theoretical and numerical studies of the stability problem of plasma current sheets. I analyze the growth of 
-        linear tearing mode instability in the current sheets with different configurations and conduct numerical simulations of the 
-        nonlinear evolution of the current sheets that are susceptible to the tearing mode instability.
-    </p>
+            <li> <b><i>Propagation of Alfv&#233n waves in the expanding solar wind with the fast-slow stream interaction</i></b>, Chen Shi, Marco Velli, Anna Tenerani, Franco Rappazzo & Victor R&#233ville, 2020, <a href="https://doi.org/10.3847/1538-4357/ab5fce" target="_blank"> ApJ, 888, 2 </a> </li>
     
-
-    <!-- My open-source simulation code -->
-    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
-    <h2 style="padding-left:60px"> Open-source MHD simulation codes I've been developing</h2>
+            <li> <b><i>Fast Recursive Reconnection and the Hall Effect: Hall-MHD Simulations</i></b>, Chen Shi, Anna Tenerani, Marco Velli & San Lu, 2019, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab33ff" target="_blank"> ApJ, 883, 172 </a> </li>
     
-    <h3 style="padding-left:60px"> [1] 2D code with open-periodic boundary condition (<a href="https://github.com/chenshihelio/MHD2DCFDFFTW_Open"
-        target="_blank">GitHub</a>)</h3>
-    <p style="padding-left:80px; padding-right:60px">This is a 2D code that adopts Fourier transform based pseudo-spectral method in one dimension
-         and compact finite difference scheme in another dimention to calculate spatial derivatives. Thus open-pereiodic boundary condition is 
-         implemented.
-    </p>
-
-    <center>
-        <img src="./figures/simulation_Bz.png" alt="3D simulation of turbulence" style="width:450px">
-        <figcaption>3D simulation of turbulence using the 3D MHD code we developed.
-    </center>
-
-    <h3 style="padding-left:60px"> [2] 3D code with periodic boundary condition (<a href="https://github.com/chenshihelio/MHD3DSpectralOpen"
-        target="_blank">GitHub</a>)</h3>
-    <p style="padding-left:80px; padding-right:60px">This is a 3D code that adopts Fourier transform based pseudo-spectral method in all the 
-        three dimensions to calculate spatial derivatives. It is very suitable for turbulence simulations.
-    </p>
-
-    <!-- Embed a video -->
-    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
-    <h2 style="padding-left:60px"> My presentation on solar wind turbulence at High Altitude Observatory </h2>
-    <center>
-    <iframe width="800" height="450"
-    src="https://www.youtube.com/embed/Yaek9PirWcc">
-    </iframe>
-    </center>
-
-
-
-    <!-- Publication -->
-    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
-    <h2 style="padding-left:60px"> Selected Publications </h2>
-    <h3 style="padding-left:80px"> For a complete publication list, please refer to my <a href="./Chen_Shi_Resume.pdf" target="_blank">CV</a> </h3>
-    <ol style="margin-left: 60px; margin-right: 60px; line-height: 30px">
-        <li> <b><i>Proton and electron temperatures in the solar wind and their correlations with the solar wind speed</i></b>, Chen Shi, Marco Velli, Roberto Lionello, et al., 2023, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/acb341" target="_blank"> ApJ, 944, 82 </a> </li>
-        
-        <li> <b><i>Acceleration of polytropic solar wind: Parker Solar Probe observation and one-dimensional model</i></b>, Chen Shi, Marco Velli, Stuart Bale, et al., 2022, <a href="https://aip.scitation.org/doi/full/10.1063/5.0124703" target="_blank"> PoP, 29, 12 </a> </li>
-        
-        <li> <b><i>Patches of Magnetic Switchbacks and Their Origins</i></b>, Chen Shi, Olga Panasenco, Marco Velli, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac7c11" target="_blank"> ApJ, 934, 152 </a> </li>
-        
-        <li> <b><i>Instabilities in a current sheet with plasma jet</i></b>, Chen Shi, 2022, <a href="https://www.doi.org/10.1017/S0022377822000575" target="_blank"> JPP, 88, 4 </a> </li>
-        
-        <li> <b><i>Influence of the heliospheric current sheet on the evolution of solar wind turbulence</i></b>, Chen Shi, Marco Velli, Anna Tenerani, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac558b" target="_blank"> ApJ, 928, 93 </a> </li>
-        
-        <li> <b><i>Stability of the magnetotail current sheet with normal magnetic field and field-aligned plasma flows</i></b>, Chen Shi, Anton Artemyev, Marco Velli, et al., 2021, <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021JA029711" target="_blank"> JGR Space Physics, 126, 11 </a> </li>
-        
-        <li> <b><i>Alfv&#233nic versus non-Alfv&#233nic turbulence in the inner heliosphere as observed by Parker Solar Probe</i></b>, Chen Shi, Marco Velli, Olga Panasenco, et al., 2021, <a href="https://www.aanda.org/articles/aa/abs/2021/06/aa39818-20/aa39818-20.html" target="_blank"> A&A, A21, 12 </a> </li>
-        
-        <li> <b><i>Oblique Tearing Mode Instability: Guide Field and Hall Effect</i></b>, Chen Shi, Marco Velli, Fulvia Pucci, Anna Tenerani & Maria Elena Innocenti, 2020, <a href="https://doi.org/10.3847/1538-4357/abb6fa" target="_blank"> ApJ, 902, 2 </a> </li>
-
-        <li> <b><i>Propagation of Alfv&#233n waves in the expanding solar wind with the fast-slow stream interaction</i></b>, Chen Shi, Marco Velli, Anna Tenerani, Franco Rappazzo & Victor R&#233ville, 2020, <a href="https://doi.org/10.3847/1538-4357/ab5fce" target="_blank"> ApJ, 888, 2 </a> </li>
-
-        <li> <b><i>Fast Recursive Reconnection and the Hall Effect: Hall-MHD Simulations</i></b>, Chen Shi, Anna Tenerani, Marco Velli & San Lu, 2019, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab33ff" target="_blank"> ApJ, 883, 172 </a> </li>
-
-        <li> <b><i>Marginal Stability of Sweet-Parker Type Current Sheets at Low Lundquist Numbers</i></b>, Chen Shi, Marco Velli & Anna Tenerani, 2018, <a href="http://iopscience.iop.org/article/10.3847/1538-4357/aabd83/meta" target="_blank"> ApJ, 859, 83 </a> </li>
-        
-        <br>
-        
-        <li> <b><i>Statistical analysis of intermittency and its association with proton heating in the near Sun environment</i></b>, Nikos Sioulas, Marco Velli, Rohit Chhiber, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac4fc1" target="_blank"> ApJ, 927, 140 </a> </li>
-        
-        <li> <b><i>Flux rope and dynamics of the heliospheric current sheet: Study of the Parker Solar Probe and Solar Orbiter conjunction of June 2020</i></b>, Victore R&#233ville, Na&#239s Fargette, Alexis Rouillard, et al., 2022, <a href="https://www.aanda.org/articles/aa/abs/2022/03/aa42381-21/aa42381-21.html" target="_blank"> A&A, 659, A110 </a> </li>
-        
-        <li> <b><i>Evolution of switchbacks in the inner Heliosphere</i></b>, Anna Tenerani, Nikos Sioulas, Lorenzo Matteini, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac2606" target="_blank"> ApJL, 919, L31 </a> </li>
-        
-        <li> <b><i>Evolution of Solar Wind Turbulence from 0.1 to 1 au during the First Parker Solar Probe&#8212Solar Orbiter Radial Alignment</i></b>, Daniele Telloni, Luca Sorriso-Valvo, Lloyd D. Woodham, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/abf7d1" target="_blank"> ApJL, 912, L21 </a> </li>
-        
-        <li> <b><i>Tearing Instability and Periodic Density Perturbations in the Slow Solar Wind</i></b>, Victor R&#233ville, Marco Velli, Alexis P. Rouillard, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ab911d" target="_blank"> ApJL, 895, L20 </a> </li>
-        
-        <li> <b><i>Onset of fast magnetic reconnection and particle energization in laboratory and space plasmas</i></b>, Fulvia Pucci, Marco Velli, Chen Shi, et al., 2020, <a href="https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/abs/onset-of-fast-magnetic-reconnection-and-particle-energization-in-laboratory-and-space-plasmas/2CC742530540A52D8A13177F0735BF98" target="_blank"> Journal of Plasma Physics, 86(6), 535860601 </a> </li>
-
-        <li> <b><i>The role of Alfv&#233n wave dynamics on the large scale properties of the solar wind: comparing a MHD simulation with PSP E1 data</i></b>, Victor R&#233ville, Marco Velli, Olga Panasenco, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab4fef" target="_blank"> ApJS, 246, 2 </a> </li>
-
-        <li> <b><i>Magnetic Field Kinks and Folds in the Solar Wind</i></b>, Anna Tenerani, Marco Velli, Lorenzo Matteini, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab53e1" target="_blank"> ApJS, 246, 2 </a> </li>
-
-        <li> <b><i>Exploring Solar Wind Origins and Connecting Plasma Flows from the Parker Solar Probe to 1 au: Nonspherical Source Surface and Alfv&#233nic Fluctuations</i></b>, Olga Panasenco, Marco Velli, Raffaella D'Amicis, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab61f4" target="_blank"> ApJS, 246, 2 </a> </li>
-
-        <li> <b><i>The Geometry of an Electron Scale Magnetic Cavity in the Plasma Sheet</i></b>, H. Liu, Q.-G. Zong, H. Zhang, et al., 2019, <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL083569" target="_blank"> GRL, 46 </a> </li>
-
-        <li> <b><i>Turbulence and Particle Acceleration in Collisionless Magnetic Reconnection: Effects of Temperature Inhomogeneity across Pre-reconnection Current Sheet</i></b>, San Lu, V. Angelopoulos, A. V. Artemyev, et al., 2019, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab1f6b" target="_blank"> ApJ, 878, 109 </a> </li>
-    </ol>
+            <li> <b><i>Marginal Stability of Sweet-Parker Type Current Sheets at Low Lundquist Numbers</i></b>, Chen Shi, Marco Velli & Anna Tenerani, 2018, <a href="http://iopscience.iop.org/article/10.3847/1538-4357/aabd83/meta" target="_blank"> ApJ, 859, 83 </a> </li>
+            
+            <!-- <br>
+            
+            <li> <b><i>Statistical analysis of intermittency and its association with proton heating in the near Sun environment</i></b>, Nikos Sioulas, Marco Velli, Rohit Chhiber, et al., 2022, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac4fc1" target="_blank"> ApJ, 927, 140 </a> </li>
+            
+            <li> <b><i>Flux rope and dynamics of the heliospheric current sheet: Study of the Parker Solar Probe and Solar Orbiter conjunction of June 2020</i></b>, Victore R&#233ville, Na&#239s Fargette, Alexis Rouillard, et al., 2022, <a href="https://www.aanda.org/articles/aa/abs/2022/03/aa42381-21/aa42381-21.html" target="_blank"> A&A, 659, A110 </a> </li>
+            
+            <li> <b><i>Evolution of switchbacks in the inner Heliosphere</i></b>, Anna Tenerani, Nikos Sioulas, Lorenzo Matteini, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac2606" target="_blank"> ApJL, 919, L31 </a> </li>
+            
+            <li> <b><i>Evolution of Solar Wind Turbulence from 0.1 to 1 au during the First Parker Solar Probe&#8212Solar Orbiter Radial Alignment</i></b>, Daniele Telloni, Luca Sorriso-Valvo, Lloyd D. Woodham, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/abf7d1" target="_blank"> ApJL, 912, L21 </a> </li>
+            
+            <li> <b><i>Tearing Instability and Periodic Density Perturbations in the Slow Solar Wind</i></b>, Victor R&#233ville, Marco Velli, Alexis P. Rouillard, et al., 2021, <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ab911d" target="_blank"> ApJL, 895, L20 </a> </li>
+            
+            <li> <b><i>Onset of fast magnetic reconnection and particle energization in laboratory and space plasmas</i></b>, Fulvia Pucci, Marco Velli, Chen Shi, et al., 2020, <a href="https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/abs/onset-of-fast-magnetic-reconnection-and-particle-energization-in-laboratory-and-space-plasmas/2CC742530540A52D8A13177F0735BF98" target="_blank"> Journal of Plasma Physics, 86(6), 535860601 </a> </li>
     
-
-    <!-- A line -->
-    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
+            <li> <b><i>The role of Alfv&#233n wave dynamics on the large scale properties of the solar wind: comparing a MHD simulation with PSP E1 data</i></b>, Victor R&#233ville, Marco Velli, Olga Panasenco, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab4fef" target="_blank"> ApJS, 246, 2 </a> </li>
     
-    <!-- Some notes -->
-    <h2 style="padding-left:60px"> My Notes </h2>
-    <!-- ********************************************************************************* -->
-    <ol type="1" style="margin-left: 60px; margin-right: 60px; line-height: 30px">
-        <li> Lecture slides: <a href="./notes/USTC_tearing_lesson.pdf" target="_blank"> Tearing Mode Instability in Magnetohydrodynamic Current Sheets </a> </li>
-        
-        <li> <a href="./notes/material_derivatives.pdf" target="_blank"> Material derivatives of the line, surface and volume elements inside a fluid  </a> </li>
-
-        <li> <a href="./notes/frozen_in_condition.pdf" target="_blank"> Frozen-in theorem of MHD fluids </a> </li>
-
-        <li> <a href="./notes/Klimontovich.pdf" target="_blank"> Proof of Klimontovich equation </a> </li>
-
-        <li> <a href="./notes/characteristics_adiabatic_neutral_gas.pdf" target="_blank"> Characteristics form of the equation for an adiabatic neutral gas</a> </li>
-
-        <li> <a href="./notes/generalized_ohms_law.pdf" target="_blank"> Generalized Ohm's Law of a plasma</a> </li>
-
-        <li> <a href="./notes/Hall_MHD_ion_cyclotron.pdf" target="_blank"> Hall MHD and the whistler/ion-cyclotron waves</a> </li>
-
-        <li> <a href="./notes/MHD_equations_from_Vlasov_eq.pdf" target="_blank"> MHD equations derived from Vlasov equation</a> </li>
+            <li> <b><i>Magnetic Field Kinks and Folds in the Solar Wind</i></b>, Anna Tenerani, Marco Velli, Lorenzo Matteini, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab53e1" target="_blank"> ApJS, 246, 2 </a> </li>
     
-        <li><a href="./notes/notes_2D_KHI_equation.pdf" target="_blank"> Derivation of the governing equation for 2D Kelvin-Helmholtz instability</a> </li>
-   
-        <li> <a href="./notes/basics_on_turbulence_and_Kolmogorov_theory.pdf" target="_blank"> Basic concepts on turbulence and introduction to Kolmogorov's theory</a> </li>
-    </ol>
-    <!-- ********************************************************************************* -->
+            <li> <b><i>Exploring Solar Wind Origins and Connecting Plasma Flows from the Parker Solar Probe to 1 au: Nonspherical Source Surface and Alfv&#233nic Fluctuations</i></b>, Olga Panasenco, Marco Velli, Raffaella D'Amicis, et al., 2020, <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ab61f4" target="_blank"> ApJS, 246, 2 </a> </li>
+    
+            <li> <b><i>The Geometry of an Electron Scale Magnetic Cavity in the Plasma Sheet</i></b>, H. Liu, Q.-G. Zong, H. Zhang, et al., 2019, <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL083569" target="_blank"> GRL, 46 </a> </li>
+    
+            <li> <b><i>Turbulence and Particle Acceleration in Collisionless Magnetic Reconnection: Effects of Temperature Inhomogeneity across Pre-reconnection Current Sheet</i></b>, San Lu, V. Angelopoulos, A. V. Artemyev, et al., 2019, <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab1f6b" target="_blank"> ApJ, 878, 109 </a> </li> -->
+        </ol>
+      </section>
 
 
+    <section id="contact" class="about">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:cshi1993@ucla.edu">Chen Shi</a>.</p>
+      <p>Address: Slichter Hall 6844-C, 603 Charles E Young Dr E, Los Angeles, CA 90095.</p>
+    </section>
+
+  </div>
+
+
+  <footer>
+    <p>&copy; 2023 Chen Shi. All rights reserved.</p>
+  </footer>
 </body>
 </html>
