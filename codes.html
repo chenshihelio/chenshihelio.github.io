@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chen Shi - Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2em;
+    }
+    .about {
+      text-align: center;
+      padding: 2em;
+    }
+    /* .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    } */
+    /* .project {
+      background-color: white;
+      padding: 1em;
+      margin: 1em;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    } */
+
+    .project {
+        display: flex;
+        align-items: center;
+        margin: 1em;
+        background-color: white;
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        /* margin: auto;
+        align-items: center; */
+        height: auto;
+    }
+
+    .project-details {
+        flex: 2;
+    }
+  
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; 
+    }
+    .centered-title {
+        text-align: center;
+    }
+
+    .selfie {
+        max-width: 30%; /* Adjust the width as needed */
+        height: auto;
+        margin-right: 10px; /* Add some space between the image and text */
+    }
+  </style>
+</head>
+
+
+  <header>
+    <h1>Chen Shi</h1>
+    <p>Assistant Researcher <br> Department of Earth, Planetary, and Space Sciences 
+        <br> University of California, Los Angeles</p>
+  </header>
+  <nav>
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="codes.html">Codes</a>
+    <a href="presentations.html">Presentations</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+<body>
+
+    <h2 class="centered-title">Open-source MHD simulation codes I've been developing</h2>
+
+    <h3 style="padding-left:60px"> [1] 2D code with open-periodic boundary condition (<a href="https://github.com/chenshihelio/MHD2DCFDFFTW_Open"
+        target="_blank">GitHub</a>)</h3>
+    <p style="padding-left:80px; padding-right:60px">This is a 2D code that adopts Fourier transform based pseudo-spectral method in one dimension
+         and compact finite difference scheme in another dimention to calculate spatial derivatives. Thus open-pereiodic boundary condition is 
+         implemented.
+    </p>
+
+    <center>
+        <img src="./figures/simulation_Bz.png" alt="3D simulation of turbulence" style="width:450px">
+        <figcaption>3D simulation of turbulence using the 3D MHD code we developed.
+    </center>
+
+    <h3 style="padding-left:60px"> [2] 3D code with periodic boundary condition (<a href="https://github.com/chenshihelio/MHD3DSpectralOpen"
+        target="_blank">GitHub</a>)</h3>
+    <p style="padding-left:80px; padding-right:60px">This is a 3D code that adopts Fourier transform based pseudo-spectral method in all the 
+        three dimensions to calculate spatial derivatives. It is very suitable for turbulence simulations.
+    </p>
+
+  <footer>
+    <p>&copy; 2023 Chen Shi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
