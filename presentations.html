@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
+      overflow-x: hidden;
     }
     header {
       background-color: #333;
@@ -97,6 +98,23 @@
         height: auto;
         margin-right: 10px; /* Add some space between the image and text */
     }
+
+    .mobile-menu-icon {
+      display: none; /* Initially hidden on larger screens */
+    }
+
+    @media screen and (max-width: 768px) {
+      /* Adjust the breakpoint (768px) as needed */
+
+      nav {
+        display: none; /* Hide the nav on small screens */
+      }
+
+      .mobile-menu-icon {
+        display: block; /* Show the mobile menu icon */
+        cursor: pointer;
+      }
+    }
   </style>
 </head>
 
@@ -105,8 +123,10 @@
     <h1>Chen Shi</h1>
     <p>Assistant Researcher <br> Department of Earth, Planetary, and Space Sciences 
         <br> University of California, Los Angeles</p>
+
+    <div class="mobile-menu-icon" onclick="toggleMobileMenu()">☰</div>
   </header>
-  <nav>
+  <nav id="navbar">
     <a href="index.html#about">About</a>
     <a href="index.html#projects">Projects</a>
     <a href="index.html#publications">Publications</a>
@@ -128,5 +148,16 @@
   <footer>
     <p>&copy; 2023 Chen Shi. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
+      } else {
+        nav.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
