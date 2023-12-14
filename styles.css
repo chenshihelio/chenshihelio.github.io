@@ -93,7 +93,7 @@ footer {
 }
 
 .selfie {
-    max-width: 30%; /* Adjust the width as needed */
+    max-width: 20%; /* Adjust the width as needed */
     height: auto;
     margin-right: 10px; /* Add some space between the image and text */
 }
